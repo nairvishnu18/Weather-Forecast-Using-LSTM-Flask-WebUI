@@ -1,0 +1,243 @@
+html{
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body{
+	background-color: #f6f6e9;
+	font-family: 'Nunito', sans-serif;
+	font-size: large;
+	text-align: justify;
+}
+.navbar{
+	width: 100%;
+	height: 50px;
+}
+.abtn, .abtn:hover{
+	color: #fff;
+	
+}
+.btn-warning{
+	margin-left: 200px;
+	margin-top: 20px;
+	content: #fff;
+	font-size: 25px;
+}
+.homesection{
+	width: 100%;
+	height: 100vh;
+	background-image: url('./images/bg-2.jpg');
+	background-size: cover;
+	animation: slide 15s ease;
+	animation-iteration-count: 3;
+	/*background-position: center;*/
+}
+@keyframes slide{
+	25%{
+		background-image: url('./images/bg-2.jpg');
+		background-size: cover;
+	}
+	50%{
+			background-image: url('./images/graphs.gif');
+		
+
+		}
+
+	75%{
+		background-image: url('./images/graphs.gif');
+		background-size: cover;
+
+		}
+
+
+	100%{
+			background-image: url('./images/bg4.jpg');
+			background-size: cover;
+
+		}
+}
+.intro{
+	color: #fff;
+	font-size:20px;
+	font-weight: bolder;
+	margin-top: 180px;
+	padding: 10px;
+}
+.display1{
+	width: 650px;
+	height: 170px;
+	background-color: #000;
+	border-radius: 20px;
+	margin-bottom: 10px;
+}
+.display2{
+	width:650px;
+	height: 150px;
+	background-color: #000400;
+	border-radius: 20px;
+}
+
+
+.section1{
+	width: 100%;
+	height: 90vh;
+	background-color: #0d3f67;
+	
+}
+
+.p1{
+	margin-top: 150px;
+	padding: 10px;
+	font-weight: bolder;
+	color: #fad3cf;
+
+}
+
+
+.allgraph{
+	margin-top: 100px;
+}
+
+.section2{
+	width: 100%;
+	height: 100vh;
+	background-color: #004d61;
+
+}
+
+.p2{
+	margin-top: 150px;
+	padding: 10px;
+	font-weight: bolder;
+	color: #f0f0f0;
+
+}
+
+.section3{
+	width: 100%;
+	height: 100vh;
+	background-color: #200A3E;
+}
+
+.section4{
+	width: 100%;
+	height: 100vh;
+	background-color: #0d3f67;
+}
+
+.section5{
+	width: 100%;
+	height: 100vh;
+	background-color: #200A3E;
+}
+
+
+.section6{
+	background-image: url(./images/Rainfall.gif);
+    background-size: cover;
+    opacity: 0.8;
+	width: 100%;
+	height: 100vh;
+	background-color: #3a9ad9;
+}
+
+
+
+/*/*Visualize and Forecast Part*/
+
+.forecast{
+	width: 100%;
+	height: 100vh;
+	background-color: #fff7f7;
+	color: white;
+}
+
+.choose{
+	margin-top: 60px;
+}
+.form{
+	display: inline;
+	margin-top: 70px;
+	margin-left: 0px;
+}
+
+#grapharea{
+	display: none;
+	height: 300px;
+	width: 100;
+}
+#grapharea2{
+	display: none;
+	height: 300px;
+	width: 100;
+}
+
+.chartzone{
+	width: 1000px;
+	height: 350px;
+	margin-top: 20px;
+	margin-left: 250px;
+	background-color: #fff7f7;
+}
+.chartzone2{
+	width: 1000px;
+	height: 350px;
+	margin-top: 20px;
+	margin-left: 250px;
+	background-color: #fff7f7;
+}
+
+
+.row{
+	margin-top: 30px;
+}
+
+#tabledatamumbai {
+  display: block;
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(0deg, #FAB426 0%, #C9F4B0 100%);
+  
+}
+
+#tabledatapune {
+  display: block;
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(0deg, #ADFAED 0%, #F490E3 100%);
+  
+}
+a,a:hover{
+	color: white;
+	text-decoration: none;
+}
+
+.fa-water,.fa-temperature-low{
+	font-size: 50px;
+	color: black;
+	margin-top: 25px;
+	margin-left: 25px;
+}
+
+.fa-map-marker-alt{
+	color: black;
+	font-size: 30px;
+	margin-left: 5px;
+
+}
+
+.tempbtn{
+	margin-top: 30px;
+	margin-left: 150px;
+	border-radius: 8px;
+	outline: none;
+	line-height: 20px;
+	padding: 7px 16px;
+
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather Forecast</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" type="text/css" href="../static/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+	
+</head>
+<body>
+	<nav class="navbar navbar-light bg-dark fixed-top">
+	   <button class="btn btn-outline-light"><a  class="abtn" href="#section2" style="text-decoration: none;">Effect on Rainfall</a></button>
+		<button class="btn btn-outline-info"><a  class="abtn" href="#section3" style="text-decoration: none;">Temperature Variation</a></button>
+		<button class="btn btn-outline-primary"><a class="abtn"  href="#section6" style="text-decoration: none;">Rainfall variation</a></button>
+		<button class="btn btn-outline-danger"><a class="abtn"  href="#section4" style="text-decoration: none;">Humidity vs Precipitation</button>
+		<button class="btn btn-outline-warning"><a  class="abtn" href="#section5" style="text-decoration: none;">Min and Max Temperatures</a></button>
+		<button class="btn btn-outline-success"><a class="abtn"  href="#section1" style="text-decoration: none;">Actual vs Feels Like</a></button>
+	</nav>
+
+	<section class="container-fluid homesection">
+		<div class="row">
+				<div class="col-lg-6">
+					<div class="display1">
+						<p class="intro" data-aos="slide-right" data-aos-duration="1000"> This Project aims to present a web based interactive visualization and forecasting platform for weather data in the regions of Mumbai and Pune. The weather data used in this project consists of various weather related information of temperature, humidity, rainfall etc. from 2009 to 2020. </p>
+					</div>
+					
+				</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="display2">
+					<button class="btn btn-outline-light mt-3 ml-2 mr-2 mb-3"><a href="#section2" style="text-decoration: none;">Effect on Rainfall</a></button>
+					<button class="btn btn-outline-info mt-3 ml-3 mr-2 mb-3"><a href="#section3" style="text-decoration: none;">Temperature Variation</a></button>
+					<button class="btn btn-outline-primary mt-3 ml-2 mr-2 mb-3"><a href="#section6" style="text-decoration: none;">Rainfall variation</a></button>
+					<button class="btn btn-outline-danger mt-3 ml-2 mr-2 mb-3"><a href="#section4" style="text-decoration: none;">Humidity vs Precipitation</button>
+					<button class="btn btn-outline-warning mt-3 ml-2 mr-2 mb-3"><a href="#section5" style="text-decoration: none;">Min and Max Temperatures</a></button>
+					<button class="btn btn-outline-success mt-3 ml-2 mr-2 mb-3"><a href="#section1" style="text-decoration: none;">Actual vs Feels Like</a></button>
+					
+				</div>
+				
+					<a class="btn btn-warning" href="/forecast" target="_blank" role="button"><b>Forecast Weather</b></a>  
+				
+				
+			</div>
+			
+		</div>
+		
+	</section>
+
+	<section class="container-fluid section1" id="section1">
+		<h2 class="text-center text-white mt-5">Actual vs Feels Like</h2>
+		<div class="row">
+
+			<div class="col-md-6 col-lg-6">
+				<p class="p1" data-aos="fade-right" data-aos-duration="1500">The "Feels-like temperature," specifically relating to when its values are greater than the actual temperature, is a measure of how hot it really feels for a human when the relative humidity is factored in.
+					The average temperature for all time in the region of Mumbai is around 29 and 30 degree celsius where as for Pune it is around 28 and 30 degrees. 
+					The Feels like temperature is related to the humidity and it significantly varies around +- 3 oC. 	</div>
+			<div class="col-md-6 allgraph" data-aos="fade-left" data-aos-duration="1500">
+				<div class='tableauPlaceholder ' id='viz1599579037492' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Actualvsfeelsliketemperature&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>             
+				   <script type='text/javascript'>         
+				         var divElement = document.getElementById('viz1599579037492');                  var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='850px';vizElement.style.height='500px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='650px';vizElement.style.height='450px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+				
+			</div>
+			
+		</div>
+		
+	</section>
+
+
+	<section class="container-fluid section2" id="section2">
+		<h2 class="mt-5 text-center text-white" >Effect of Rainfall on Temeprature</h2>
+
+		<div class="row">
+			<div class="col-md-6 col-lg-6 allgraph" data-aos="fade-right" data-aos-duration="1500">
+				<div class='tableauPlaceholder' id='viz1599579130110' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Actualvsfeelsliketemperature&#47;Dashboard4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1599579130110');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='850px';vizElement.style.height='500px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='700px';vizElement.style.height='500px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+			</div>
+			<div class="col-md-6 col-lg-6">
+				<p class="p2" data-aos="fade-left" data-aos-duration="1500"> Depending on the Humidity level, a rain can cool or make an environment feel warmer. As average temperatures at the Earth's surface rise, more evaporation occurs, which, in turn, increases overall precipitation. Therefore, a warming climate is expected to increase precipitation. In regions of Mumbai where the humidity increases, it is expected to increase the level of precipitation.
+			</div>
+
+		</div>
+		
+	</section>
+
+
+
+	<section class="container-fluid section3" id="section3">
+						<h2 class="mt-5 text-center text-white" >Temperature Variation</h2>
+
+		<div class="row">
+
+			<div class="col-md-6 col-lg-6">
+				<p class="p1" data-aos="fade-right" data-aos-duration="1500"> Considering the parameters such as humidity, varing precipitation, cloud cover etc. the tempeartue in both the region vary. Mumbai being on the costal area experience varing rainfall in the monsoon.
+					Similarly, Humidity compared to Pune region, is slighly on the higher side over the years. Rainfall has caused the temperature to cool down in both the regions and Pune is observed to be have a slightly low tempeartue than Mumbai.		</div>
+			<div class="col-md-6 allgraph" data-aos="fade-left" data-aos-duration="1500">
+				<div class='tableauPlaceholder' id='viz1599579208985' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Actualvsfeelsliketemperature&#47;Dashboard5' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1599579208985');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='850px';vizElement.style.height='500px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='650px';vizElement.style.height='500px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);               
+				 </script>
+		
+			</div>
+			
+		</div>
+		
+	</section>
+
+
+
+	<section class="container-fluid section4" id="section4">
+			<h2 class="mt-5 text-center text-white" >Humidity and Precipitation Variation</h2>
+			<p style="font-weight: bold;" class="text-center text-white mt-2">Humidity indicates the likelihood for precipitation, dew, or fog to be present. The amount of water vapor needed to achieve saturation increases as the temperature increases. However, the longer it rains, the more the humidity will increase because of the air constantly drawing the water.
+			</p>
+		<div class="row">
+			<div class="col-md-6 col-lg-6 allgraph"data-aos="fade-right" data-aos-duration="1500"data-aos="fade-left" data-aos-duration="1500">
+				<div class='tableauPlaceholder' id='viz1599579328216' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Actualvsfeelsliketemperature&#47;Dashboard6' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1599579328216');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='850px';vizElement.style.height='500px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='600px';vizElement.style.height='500px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+				</div>
+				<div class="col-lg-6 col-md-6 allgraph" data-aos="fade-left" data-aos-duration="1500">
+				<div class='tableauPlaceholder' id='viz1599579423685' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard8&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Actualvsfeelsliketemperature&#47;Dashboard8' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard8&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1599579423685');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='850px';vizElement.style.height='500px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='600px';vizElement.style.height='500px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+				
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="container-fluid section5" id="section5">
+				<h2 class="mt-5 text-center text-white" >Min and Max Temperatures</h2>
+		<div class="row">
+			<div class="col-md-6 col-lg-6 allgraph"data-aos="slide-right" data-aos-duration="1500">
+				<div class='tableauPlaceholder' id='viz1599579472887' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard9&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Actualvsfeelsliketemperature&#47;Dashboard9' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard9&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1599579472887');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='850px';vizElement.style.height='500px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='650px';vizElement.style.height='500px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+			</div>
+			<div class="col-md-6 col-lg-6">
+				<p class="p1" data-aos="slide-left" data-aos-duration="1500"> The Minimum and Maximum temperature is calculated by considering the average tempearture from 2009 to 2020 month wise. The Maximum Avgerage temperature per year is considered here to represent the graph.
+					As seen in the graph, Mumbai and Pune bot has the  Min and Max Temperature of almost the same level per years and the differnce is not much seen. The Minimum falls down to 20 in Pune whereas it reamins close to 24 in Mumbai per year.			</div>
+		</div>
+	</section>
+
+
+
+<section class="container-fluid section6" id="section6">
+		<h2 class="mt-5 text-center text-white" >Rainfall Variation</h2>
+
+		<div class="row">
+
+			<div class="col-md-6 col-lg-6">
+				<p class="p1 text-white" data-aos="fade-right" data-aos-duration="1500"> India's Monsoon has shown significant changes over the past few years. The annual showers has changed due to climate change especially in past few decades.
+					There has been increase in rainy days especially from June to September in overall Maharashtra. Mumbai has received a average precipitation level upto 0.6mm and Pune of 0.28mm over past few years.
+					
+					</div>
+			<div class="col-md-6 allgraph" data-aos="fade-left" data-aos-duration="1500">
+				<div class='tableauPlaceholder' id='viz1599579371487' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard7&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Actualvsfeelsliketemperature&#47;Dashboard7' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ac&#47;Actualvsfeelsliketemperature&#47;Dashboard7&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1599579371487');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='850px';vizElement.style.height='500px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='650px';vizElement.style.height='500px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);               
+				 </script>
+			
+		</div>
+		
+	</section>
+
+
+
+
+<!-- Forecasting -->
+
+
+	<!-- <section id="forecast" class="container-fluid forecast">
+		<h1 class="text-center text-white">Forecast</h1>
+		<form class="form-inline" action="/getforecast" id="chartform" method="POST">
+			<button type="submit" class="btn btn-success mb-2">Get Forecast</button>
+		</form>
+	
+
+	<div>
+		<button class="btn btn-success mb-2 text-center show" id="btn">Visualize</button>
+		<table class="table table-striped table-bordered text-center table-hover" id="datatable">
+			<thead >
+				<th>Date</th>
+				<th>Temperature</th>
+			</thead>
+			<tbody color: white;>
+			{% for data in results %}
+				<tr>
+					<td>{{data.Date}}</td>
+					<td>{{data.Temp}}</td>
+					
+				</tr>
+			{% endfor %}
+			</tbody>
+
+		</table>
+	</div>
+	<div id = "container" style = "width: 1050px; height: 400px; margin-top: 50px;margin-left: 500px;"></div>
+	<script language = "JavaScript">
+		$('#btn').click(function() {
+			  
+			$('#container').highcharts({
+
+				xAxis: {
+					categories: ["2020-04-30", "2020-05-01", "2020-05-02", "2020-05-03", "2020-05-04", "2020-05-05"]
+				},
+
+				series: [{
+					data: [31,32, 30, 30.29, 29, 29.54]
+				}]
+
+			})
+		});
+  </script>
+	</section> -->
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+
+	<!-- Bootsrap JS  -->
+	<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+	
+</body>
+</html>

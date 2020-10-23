@@ -1,0 +1,16 @@
+1. Hourly day-ahead solar irradiance prediction using weather forecasts by LSTM
+https://www.sciencedirect.com/science/article/abs/pii/S0360544218302056
+
+2. Air pollution forecasting based on attention‐based LSTM neural network and ensemble learning
+https://onlinelibrary.wiley.com/doi/abs/10.1111/exsy.12511
+
+3. Transductive LSTM for time-series prediction: An application to weather forecasting
+https://www.sciencedirect.com/science/article/abs/pii/S0893608020300010
+
+
+4. Temperature prediction using fuzzy time series
+https://ieeexplore.ieee.org/abstract/document/836375
+
+
+5. Stock market's price movement prediction with LSTM neural networks
+https://ieeexplore.ieee.org/abstract/document/7966019/
