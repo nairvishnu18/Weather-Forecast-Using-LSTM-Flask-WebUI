@@ -24,6 +24,7 @@
 			</div>	
 			<div id="grapharea">
 				<div id = "container" class="chartzone"></div>
+				
 			</div>
 		<!-- Start of Mumbai Section -->
 		<section class="container-fluid" id="mumbaisection">
@@ -47,7 +48,10 @@
 						<form class="form" action="/getforecastmumbai" id="chartform" method="POST">
 							<button class="tempbtn">Some Parameters</button>
 						</form>
-						<button style="margin-left: 150px;" class="btn btn-primary text-center show" id="btn-m">Visualize Mumbai</button>
+						<b style="margin-left: 100px;color: #000;">Visualize:</b> 
+						<button style="margin-left: 10px;" class="btn btn-dark text-center" id="btn-mt"> T</button>
+						<button style="margin-left: 10px;" class="btn btn-dark text-center" id="btn-mh"> H</button>
+
 
 						<!-- Table Structure data  -->
 						<div class="col-md-12 mt-3">
@@ -103,7 +107,10 @@
 						<form class="form" action="/getforecastpune" id="chartform" method="POST">
 							<button class="tempbtn">Some Parameters</button>
 						</form>
-						<button style="margin-left: 200px;" class="btn btn-primary text-center show" id="btn-p">Visualize Pune</button>
+						<b style="margin-left: 100px;color: #000;">Visualize:</b> 
+						<button style="margin-left: 10px;" class="btn btn-success text-center" id="btn-pt"> T</button>
+						<button style="margin-left: 10px;" class="btn btn-success text-center" id="btn-ph"> H</button>
+
 						<!-- Table Structure data  -->
 						<div class="col-md-12 mt-3">
 					
@@ -162,15 +169,20 @@
 		}
 	</script> -->
 
+<!-- -----Mumbai Visualization Section begins Here---- -->
+
+	<!-- Mumbai Tempearture Plot -->
 	<script>
 		// Mumbai Data Visualization
-		$('#btn-m').click(function() {
+		$('#btn-mt').click(function() {
 			var x =  document.getElementById('grapharea');
 			if (x.style.display === "none") {
 		    x.style.display = "block";
 		  } else {
 		    x.style.display = "none";
 		  }
+
+		  // Mumbai Temperature Plot
 			$('#container').highcharts({
 
 				title:{
@@ -197,13 +209,61 @@
 				}]
 
 			})
+
+		
 		});
 	</script>
 
-	<!-- // Pune Data Visualization -->
+	<!-- Mumbai Humidity Plot -->
+	<script>
+		// Mumbai Humidity Plot
+		$('#btn-mh').click(function() {
+			var x =  document.getElementById('grapharea');
+			if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+
+		  
+			$('#container').highcharts({
+
+				title:{
+				      text: 'Mumbai -Predicted Humidity in oC'
+				},
+
+				xAxis: {
+					categories: ["2020-04-30", "2020-05-01", "2020-05-02", "2020-05-03", "2020-05-04", "2020-05-05"],
+					title:{
+						enabled:true,
+						text:'<b>Forecast Dates</b>'
+					}
+				},
+				yAxis:{
+					title:{
+						enabled:true,
+						text:'<b>Forecast Humidity</b>'
+					}
+				},
+
+				series: [{
+					data: [59,63, 65, 64, 69, 67]
+					
+				}]
+
+			})
+
+		
+		});
+	</script>
+
+
+<!-- -----Pune Visualization Section begins Here---- -->
+
+  <!--  Pune Tempearture Visualization -->
 	<script>
 		
-		$('#btn-p').click(function() {
+		$('#btn-pt').click(function() {
 			var x =  document.getElementById('grapharea2');
 			if (x.style.display === "none") {
 			    x.style.display = "block";
@@ -239,7 +299,49 @@
   
 			  })
 		  });
-  </script>
+    </script>
+
+  <!-- Pune Humidity Data Plot -->
+
+    <script>
+		
+		$('#btn-ph').click(function() {
+			var x =  document.getElementById('grapharea2');
+			if (x.style.display === "none") {
+			    x.style.display = "block";
+			  } 
+			else {
+			    x.style.display = "none";
+			  }
+			  
+			  $('#container2').highcharts({
+  
+				  title:{
+						text: 'Pune - Predicted Humidity in oC'
+				  },
+  
+				  xAxis: {
+					  categories: ["2020-04-30", "2020-05-01", "2020-05-02", "2020-05-03", "2020-05-04", "2020-05-05"],
+					  title:{
+						  enabled:true,
+						  text:'<b>Forecast Dates</b>'
+					  }
+				  },
+				  yAxis:{
+					  title:{
+						  enabled:true,
+						  text:'<b>Forecast Humidity</b>'
+					  }
+				  },
+  
+				  series: [{
+					  data: [51,48, 42, 39,40,42]
+					  
+				  }]
+  
+			  })
+		  });
+    </script>
 
 </body>
 </html>
