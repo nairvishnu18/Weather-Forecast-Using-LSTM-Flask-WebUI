@@ -73,6 +73,68 @@ def gethumiditymum():
 
     return render_template("newforecast.html", results=results)
 
+# Mumbai WindSpeed
+@app.route('/getwindspeedmum',methods=['POST'])
+def getwindspeedmum():
+    if request.method == 'POST':
+        results=[]
+        rows=[]
+        file_exists = os.path.exists('./Prediction/mumbai-humidity-predicted.csv')
+        if(file_exists):
+            with open('./Prediction/mumbai-windspeed-predicted.csv', 'r') as f:
+                reader = csv.reader(f, delimiter=',')
+                fields = next(reader)
+                for row in reader: 
+                    rows.append(row) 
+                for row in rows:
+                        results.append({
+                            "Date": row[0],
+                            "Values": row[1]
+                            
+                            })
+        else:
+            results.append({
+                            "Date": "No Record",
+                            "Values": "Found"
+                            })
+
+
+    return render_template("newforecast.html", results=results)
+
+
+# Mumbai Air Quality Forecast
+@app.route('/getairqualitymum',methods=['POST'])
+def getairqualitymum():
+    if request.method == 'POST':
+        results=[]
+        rows=[]
+        file_exists = os.path.exists('./Prediction/mumbai-aqi-predicted.csv')
+        if(file_exists):
+            with open('./Prediction/mumbai-aqi-predicted.csv', 'r') as f:
+                reader = csv.reader(f, delimiter=',')
+                fields = next(reader)
+                for row in reader: 
+                    rows.append(row) 
+                for row in rows:
+                        results.append({
+                            "Date": row[0],
+                            "Values": row[1]
+                            
+                            })
+        else:
+            results.append({
+                            "Date": "No Record",
+                            "Values": "Found"
+                            })
+
+
+    return render_template("newforecast.html", results=results)
+
+
+
+
+
+
 #----------END OF MUMBAI---------
 
 # Pune Section Begins Here
@@ -114,6 +176,65 @@ def gethumiditypune():
         file_exists = os.path.exists('./Prediction/pune-humidity-predicted.csv')
         if(file_exists):
             with open('./Prediction/pune-humidity-predicted.csv', 'r') as f:
+                reader = csv.reader(f, delimiter=',')
+                fields = next(reader)
+                for row in reader: 
+                    rows.append(row) 
+                for row in rows:
+                        res.append({
+                            "Date": row[0],
+                            "Values": row[1]
+                            
+                            })
+        else:
+            res.append({
+                            "Date": "No Record",
+                            "Values": "Found"
+                            })
+
+
+    return render_template("newforecast.html", res=res)
+
+# Pune WindSpeed
+
+@app.route('/getwindspeedpune',methods=['POST'])
+def getwindspeedpune():
+    if request.method == 'POST':
+        res=[]
+        rows=[]
+        file_exists = os.path.exists('./Prediction/pune-windspeed-predicted.csv')
+        if(file_exists):
+            with open('./Prediction/pune-windspeed-predicted.csv', 'r') as f:
+                reader = csv.reader(f, delimiter=',')
+                fields = next(reader)
+                for row in reader: 
+                    rows.append(row) 
+                for row in rows:
+                        res.append({
+                            "Date": row[0],
+                            "Values": row[1]
+                            
+                            })
+        else:
+            res.append({
+                            "Date": "No Record",
+                            "Values": "Found"
+                            })
+
+
+    return render_template("newforecast.html", res=res)
+
+
+# Pune  Air Quality Predicted
+
+@app.route('/getairqualitypune',methods=['POST'])
+def getairqualitypune():
+    if request.method == 'POST':
+        res=[]
+        rows=[]
+        file_exists = os.path.exists('./Prediction/pune-aqi-predicted.csv')
+        if(file_exists):
+            with open('./Prediction/pune-aqi-predicted.csv', 'r') as f:
                 reader = csv.reader(f, delimiter=',')
                 fields = next(reader)
                 for row in reader: 

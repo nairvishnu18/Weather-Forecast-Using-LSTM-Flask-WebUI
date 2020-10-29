@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" type="text/css" href="../static/styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://code.highcharts.com/highcharts.js"></script>
@@ -26,15 +26,19 @@
 				<div id = "container" class="chartzone"></div>
 				
 			</div>
+
 		<!-- Start of Mumbai Section -->
 		<section class="container-fluid" id="mumbaisection">
 			<div class="row">
 				<div id="tabledatamumbai">
 					<h3 class="text-dark ml-4 mt-2"><i class="fas fa-map-marker-alt"></i> Mumbai </h3>
 					<i class="fas fa-temperature-low"></i><i class="fas fa-water"></i>
+
 					<!-- weather widget start -->
-					<a target="_blank" style="float: right;margin-top: -50px;" href="https://www.booked.net/weather/mumbai-26831"><img src="https://w.bookcdn.com/weather/picture/3_26831_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=w209&anc_id=57238"  alt="booked.net"/></a>
+					<a target="_blank" style="float: right;margin-top: -50px;" href="https://www.booked.net/weather/mumbai-26831"><img src="https://w.bookcdn.com/weather/picture/3_26831_1_1_137AE9_430_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=w209&anc_id=68828"  alt="booked.net"/></a>
 					<!-- weather widget end -->
+
+					
 					<div class="choose">
 						<form class="form" action="/getforecastmumbai" id="chartform" method="POST">
 							<button class="tempbtn">Temperature</button>
@@ -42,15 +46,17 @@
 						<form class="form" action="/gethumiditymum" id="chartform" method="POST">
 							<button class="tempbtn">Humidity</button>
 						</form>
-						<form class="form" action="/getforecastmumbai" id="chartform" method="POST">
-							<button class="tempbtn">Some Parameters</button>
+						<form class="form" action="/getwindspeedmum" id="chartform" method="POST">
+							<button class="tempbtn">Wind</button>
 						</form>
-						<form class="form" action="/getforecastmumbai" id="chartform" method="POST">
-							<button class="tempbtn">Some Parameters</button>
+						<form class="form" action="/getairqualitymum" id="chartform" method="POST">
+							<button class="tempbtn">Air Quality</button>
 						</form>
 						<b style="margin-left: 100px;color: #000;">Visualize:</b> 
 						<button style="margin-left: 10px;" class="btn btn-dark text-center" id="btn-mt"> T</button>
 						<button style="margin-left: 10px;" class="btn btn-dark text-center" id="btn-mh"> H</button>
+						<button style="margin-left: 10px;" class="btn btn-dark text-center" id="btn-mw"> W</button>
+						<button style="margin-left: 10px;" class="btn btn-dark text-center" id="btn-maq"> AQ</button>
 
 
 						<!-- Table Structure data  -->
@@ -59,7 +65,7 @@
 							<table class="table table-striped table-bordered text-center table-hover" id="datatable">
 								<thead >
 									<th>Date</th>
-									<th>Temperature</th>
+									<th>Result</th>
 								</thead>
 								<tbody color: white;>
 								{% for data in results %}
@@ -91,9 +97,11 @@
 				<div id="tabledatapune">
 					<h3 class="text-dark ml-4 mt-2"><i class="fas fa-map-marker-alt"></i> Pune</h3>
 					<i class="fas fa-temperature-low"></i><i class="fas fa-water"></i>
+					
 					<!-- weather widget start -->
-					<a target="_blank" style="float: right;margin-top: -50px;" href="https://www.booked.net/weather/pune-2119"><img src="https://w.bookcdn.com/weather/picture/3_2119_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=w209&anc_id=90529"  alt="booked.net"/></a>
+					<a target="_blank" style="float: right; margin-top: -50px;" href="https://www.booked.net/weather/pune-2119"><img src="https://w.bookcdn.com/weather/picture/3_2119_1_1_137AE9_430_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=w209&anc_id=74912"  alt="booked.net"/></a>
 					<!-- weather widget end -->
+
 					<div class="choose">
 						<form class="form" action="/getforecastpune" id="chartform" method="POST">
 							<button class="tempbtn">Temperature</button>
@@ -101,15 +109,17 @@
 						<form class="form" action="/gethumiditypune" id="chartform" method="POST">
 							<button class="tempbtn" >Humidity</button>
 						</form>
-						<form class="form" action="/getforecastpune" id="chartform" method="POST">
-							<button class="tempbtn">Some Parameters</button>
+						<form class="form" action="/getwindspeedpune" id="chartform" method="POST">
+							<button class="tempbtn">Wind</button>
 						</form>
-						<form class="form" action="/getforecastpune" id="chartform" method="POST">
-							<button class="tempbtn">Some Parameters</button>
+						<form class="form" action="/getairqualitypune" id="chartform" method="POST">
+							<button class="tempbtn">Air Quality</button>
 						</form>
 						<b style="margin-left: 100px;color: #000;">Visualize:</b> 
 						<button style="margin-left: 10px;" class="btn btn-success text-center" id="btn-pt"> T</button>
 						<button style="margin-left: 10px;" class="btn btn-success text-center" id="btn-ph"> H</button>
+						<button style="margin-left: 10px;" class="btn btn-success text-center" id="btn-pw"> W</button>
+						<button style="margin-left: 10px;" class="btn btn-success text-center" id="btn-paq"> AQ</button>
 
 						<!-- Table Structure data  -->
 						<div class="col-md-12 mt-3">
@@ -117,7 +127,7 @@
 							<table class="table table-striped table-bordered text-center table-hover" id="datatable">
 								<thead >
 									<th>Date</th>
-									<th>Temperature</th>
+									<th>Result</th>
 								</thead>
 								<tbody color: white;>
 								{% for data in res %}
@@ -131,9 +141,7 @@
 		
 							</table>
 						</div>
-						<!-- <section style="margin-top: 300px;">
-							<div style="display: none;" id = "container" class="chartzone"></div>
-						</section> -->
+						
 
 				</div>
 			</div>
@@ -193,13 +201,13 @@
 					categories: ["2020-04-30", "2020-05-01", "2020-05-02", "2020-05-03", "2020-05-04", "2020-05-05"],
 					title:{
 						enabled:true,
-						text:'<b>Forecast Dates</b>'
+						text:'<b>Dates</b>'
 					}
 				},
 				yAxis:{
 					title:{
 						enabled:true,
-						text:'<b>Forecast Temperature</b>'
+						text:'<b>Temperature</b>'
 					}
 				},
 
@@ -236,13 +244,13 @@
 					categories: ["2020-04-30", "2020-05-01", "2020-05-02", "2020-05-03", "2020-05-04", "2020-05-05"],
 					title:{
 						enabled:true,
-						text:'<b>Forecast Dates</b>'
+						text:'<b>Dates</b>'
 					}
 				},
 				yAxis:{
 					title:{
 						enabled:true,
-						text:'<b>Forecast Humidity</b>'
+						text:'<b>Humidity</b>'
 					}
 				},
 
@@ -257,7 +265,93 @@
 		});
 	</script>
 
+	<!-- Mumbai WindSpeed Plot -->
+	<script>
+		
+		$('#btn-mw').click(function() {
+			var x =  document.getElementById('grapharea');
+			if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
 
+		  
+			$('#container').highcharts({
+
+				title:{
+				      text: 'Mumbai -Predicted WindSpeed in Kmph'
+				},
+
+				xAxis: {
+					categories: ["2020-04-30", "2020-05-01", "2020-05-02", "2020-05-03", "2020-05-04", "2020-05-05"],
+					title:{
+						enabled:true,
+						text:'<b>Dates</b>'
+					}
+				},
+				yAxis:{
+					title:{
+						enabled:true,
+						text:'<b>WindSpeed</b>'
+					}
+				},
+
+				series: [{
+					data: [12.37,12.23, 12.60, 12.99, 13.09, 13.01]
+					
+				}]
+
+			})
+
+		
+		});
+	</script>
+
+	<!-- Mumbai AQI Plot -->
+	<script>
+		
+		$('#btn-maq').click(function() {
+			var x =  document.getElementById('grapharea');
+			if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+
+		  
+			$('#container').highcharts({
+
+				title:{
+				      text: 'Mumbai -Predicted Air Quality Values'
+				},
+
+				xAxis: {
+					categories: ["2020-04-30", "2020-05-01", "2020-05-02", "2020-05-03", "2020-05-04", "2020-05-05"],
+					title:{
+						enabled:true,
+						text:'<b>Dates</b>'
+					}
+				},
+				yAxis:{
+					title:{
+						enabled:true,
+						text:'<b>Air Quality Index</b>'
+					}
+				},
+
+				series: [{
+					data: [68,52,55,82,63,67]
+					
+				}]
+
+			})
+
+		
+		});
+	</script>
+
+	<!-- Mumbai Visualization End  -->
 <!-- -----Pune Visualization Section begins Here---- -->
 
   <!--  Pune Tempearture Visualization -->
@@ -282,13 +376,13 @@
 					  categories: ["2020-04-30", "2020-05-01", "2020-05-02", "2020-05-03", "2020-05-04", "2020-05-05"],
 					  title:{
 						  enabled:true,
-						  text:'<b>Forecast Dates</b>'
+						  text:'<b>Dates</b>'
 					  }
 				  },
 				  yAxis:{
 					  title:{
 						  enabled:true,
-						  text:'<b>Forecast Temperature</b>'
+						  text:'<b>Temperature</b>'
 					  }
 				  },
   
@@ -324,13 +418,13 @@
 					  categories: ["2020-04-30", "2020-05-01", "2020-05-02", "2020-05-03", "2020-05-04", "2020-05-05"],
 					  title:{
 						  enabled:true,
-						  text:'<b>Forecast Dates</b>'
+						  text:'<b>Dates</b>'
 					  }
 				  },
 				  yAxis:{
 					  title:{
 						  enabled:true,
-						  text:'<b>Forecast Humidity</b>'
+						  text:'<b>Humidity</b>'
 					  }
 				  },
   
@@ -341,7 +435,94 @@
   
 			  })
 		  });
-    </script>
+	</script>
+	
+	<!-- Pune WindSpeed Plot -->
+	<script>
+		
+			$('#btn-pw').click(function() {
+				var x =  document.getElementById('grapharea2');
+				if (x.style.display === "none") {
+				x.style.display = "block";
+			  } else {
+				x.style.display = "none";
+			  }
+	
+			  
+				$('#container2').highcharts({
+	
+					title:{
+						  text: 'Pune -Predicted WindSpeed in Kmph'
+					},
+	
+					xAxis: {
+						categories: ["2020-04-30", "2020-05-01", "2020-05-02", "2020-05-03", "2020-05-04", "2020-05-05"],
+						title:{
+							enabled:true,
+							text:'<b>Date</b>'
+						}
+					},
+					yAxis:{
+						title:{
+							enabled:true,
+							text:'<b>WindSpeed</b>'
+						}
+					},
+	
+					series: [{
+						data: [19.25,17.98, 16.71, 15.69, 15.61, 14.92]
+						
+					}]
+	
+				})
+	
+			
+			});
+		</script>
 
+		<!-- Pune AQI Plot -->
+		<script>
+		
+			$('#btn-paq').click(function() {
+				var x =  document.getElementById('grapharea2');
+				if (x.style.display === "none") {
+				x.style.display = "block";
+			  } else {
+				x.style.display = "none";
+			  }
+	
+			  
+				$('#container2').highcharts({
+	
+					title:{
+						  text: 'Pune -Predicted Air Quality Values'
+					},
+	
+					xAxis: {
+						categories: ["2020-04-30", "2020-05-01", "2020-05-02", "2020-05-03", "2020-05-04", "2020-05-05"],
+						title:{
+							enabled:true,
+							text:'<b>Dates</b>'
+						}
+					},
+					yAxis:{
+						title:{
+							enabled:true,
+							text:'<b>Air Quality Index</b>'
+						}
+					},
+	
+					series: [{
+						data: [65,69,55,70,65,78]
+						
+					}]
+	
+				})
+	
+			
+			});
+		</script>
+
+		<!-- Pune Visualization End  -->
 </body>
 </html>
