@@ -3,6 +3,7 @@ html{
 	overflow-x: hidden;
 }
 
+
 body{
 	background-color: #f6f6e9;
 	font-family: 'Nunito', sans-serif;
@@ -101,7 +102,7 @@ body{
 .section2{
 	width: 100%;
 	height: 100vh;
-	background-color: #004d61;
+	background-color:#2E94B9; /*#004d61*/
 
 }
 
@@ -109,14 +110,14 @@ body{
 	margin-top: 150px;
 	padding: 10px;
 	font-weight: bolder;
-	color: #f0f0f0;
+	color: /*#f0f0f0*/ black;
 
 }
 
 .section3{
 	width: 100%;
 	height: 100vh;
-	background-color: #200A3E;
+	background-color: /*#200A3E*/#4E0E2E;
 }
 
 .section4{
@@ -128,7 +129,7 @@ body{
 .section5{
 	width: 100%;
 	height: 100vh;
-	background-color: #200A3E;
+	background-color: /*#200A3E*/#D25565;
 }
 
 
@@ -197,7 +198,7 @@ body{
   width: 100%;
   height: 700px;
   margin-top: 50px;
-  background: linear-gradient(0deg, #FAB426 0%, #C9F4B0 100%);
+  background: linear-gradient(0deg, #005F6B 0%, #B0F465 100%);
   
 }
 
@@ -206,8 +207,7 @@ body{
   width: 100%;
   height: 700px;
   margin-top: 50px;
-  background: linear-gradient(0deg, #ADFAED 0%, #F490E3 100%);
-  
+  background: linear-gradient(0deg, #286B38 0%, #36A1F4 100%);
 }
 a,a:hover{
 	color: white;
@@ -228,7 +228,7 @@ a,a:hover{
 
 }
 
-.tempbtn{
+.mumbtn,.punebtn{
 	margin-top: 30px;
 	margin-left: 150px;
 	border-radius: 8px;
@@ -238,8 +238,22 @@ a,a:hover{
 
 }
 
+.mumbtn:focus{
+	background-color: #2E94B9;
+}
+
 table {
   border-collapse: collapse;
   border: 1px solid black;
+  
+}
+td{
+	color: #fff;
+	font-weight: bolder;
+	font-size: 20px;
 }
 
+button:focus {
+	outline: #005F6B auto 5px; 
+	background-color: #B0F465;
+}
